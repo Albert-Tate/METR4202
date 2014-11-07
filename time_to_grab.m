@@ -29,17 +29,23 @@ end
 
 %find angular distance between cup and intercept point DOESN'T WORK
 P = [xP, yP];
+Pc = P - path_C;
+cupPOSc = cupPOS - path_C;
 
 %find clockwise angle
- diff = abs(atan2( ((P(1)-path_C(1))*(cupPOS(2)-path_C(2))) - ((P(2)-path_C(2))*(cupPOS(1)-path_C(1))),...
-         dot(cupPOS-path_C, P - path_C)))
-
+    %Magical trig
+ diff = atan2( (Pc(1)*cupPOSc(2) ) - (Pc(2)*cupPOSc(1)),...
+         (Pc(1)*cupPOSc(1) + Pc(2)*cupPOSc(2)));
+diff = mod(diff, 2*pi);
 time = diff/omega;
+
+%should never happen but will ensure negative wait times are impossible
 if(time < 0),
     time = 2*pi/omega + time;
 end
 
 if (DEBUG == 1),
+    figure;
     d = path_R*2;
     px = path_C(1)-path_R;
     py = path_C(2)-path_R;

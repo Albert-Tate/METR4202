@@ -14,7 +14,7 @@ path_C = [PAR(1), PAR(2)];
 
 path_R = PAR(3);
 
-RES = zeros(size(POS,1)-1);
+RES = zeros(size(POS,1)-1,1);
 for i = 1:(size(POS,1)-1),
    %At each point find angular distance to next point
    %Divide through by time difference to get rad/s
@@ -28,7 +28,7 @@ end
 omega = mean(RES);
 
 if(DEBUG == 1),
-    
+    figure;
     d = path_R*2;
     px = path_C(1)-path_R;
     py = path_C(2)-path_R;
