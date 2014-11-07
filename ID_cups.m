@@ -9,8 +9,8 @@ function [ COORD, ID ] = ID_cups( box, Image, DepthImage, K_camera )
 %% Create and translate bounding boxes
    %Do not try to fix
 grayImage = rgb2gray(Image);
-depthBox(1) = round((box(1) - 15)*1.07418118); %transformy business 
-depthBox(3) = round(((box(3) + box(1)) - 15)*1.07418118) - depthBox(1);
+depthBox(1) = round((box(1) - 1(5)*1.07418118); %transformy business 
+depthBox(3) = round((box(3) + box(1)) - 15)*1.07418118) - depthBox(1);
 depthBox(2) = round((box(2) + 25)*0.880541922);
 depthBox(4) = box(4);%round((box(4) + 480)*0.35297548);% - depthBox(2);
 
