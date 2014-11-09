@@ -28,7 +28,7 @@ end
 omega = mean(RES);
 
 if(DEBUG == 1),
-    figure;
+    %figure;
     d = path_R*2;
     px = path_C(1)-path_R;
     py = path_C(2)-path_R;
