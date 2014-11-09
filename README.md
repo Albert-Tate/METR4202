@@ -4,7 +4,7 @@ METR4202 Lab 3 Repository
  
  __Last edited:__  09/11/2014.
 
-__Version:__  1.0.
+__Version:__  0.4 \alpha.
  
 GENERAL PROJECT NOTES
 -----------
@@ -17,19 +17,17 @@ INSTALLATION
 -----------
 __Install MATLAB__
 
-The latest version of MATLAB can be isntalled from the [MathWorks website](http://www.mathworks.com.au/products/matlab/).
+The latest version of MATLAB can be isntalled from the [MathWorks website](http://www.mathworks.com.au/products/matlab/ "MathWorks products page").
 
 __Install Xbox Kinect Software__
+This guide is based off *Kinect 360 Setup for Matlab R2014a* by __P. Mahoney__ (2014).
 
-1. Download and install the [Kinect For Windows SDK](http://www.microsoft.com/en-au/download/details.aspx?id=40278).
-2. Download the [Kinect IMAQ Adaptor](http://robotics.itee.uq.edu.au/~metr4202/kinect/kinectimaq.zip), unzip it and placece the files in a MATLAB direcotry.
-3. Install the adapter in MATLAB using the command __>> imaqregister(’H:/metr4202/kinectimaq/mwkinectimaq.dll’)__.
-4. Test it was installed correctly run __imaqhwinfo__.  The output should be similar to:
-   __ans = InstalledAdaptors: {’mwkinectimaq’} MATLABVersion: ’8.3 (R2014a)’ ToolboxName: ’Image Acquisition Toolbox’ ToolboxVersion: ’4.7 (R2014a)’__.
+1. Download and install the [Kinect For Windows SDK](http://www.microsoft.com/en-au/download/details.aspx?id=40278 "Kinect for Windows SDK").
+2. Download the [Kinect IMAQ Adaptor](http://robotics.itee.uq.edu.au/~metr4202/kinect/kinectimaq.zip "Kinect IMAQ Adaptor"), unzip it and placece the files in a MATLAB direcotry.
+3. Install the adapter in MATLAB using the command... __>> imaqregister(’H:/metr4202/kinectimaq/mwkinectimaq.dll’)__.
+4. Test it was installed correctly run __imaqhwinfo__.  The output should be similar to:... __ans = InstalledAdaptors: {’mwkinectimaq’} MATLABVersion: ’8.3 (R2014a)’ ToolboxName: ’Image Acquisition Toolbox’ ToolboxVersion: ’4.7 (R2014a)’__.
 5. To recieve input from the kinect run the command __>> vid = videoinput(’mwkinectimaq’, 1);__ which will create an object called __vid__ that can then be shown using the command __ >> preview(vid);__.
-6. Further documentation can be found from the [MATLAB documentation pages](http://www.mathworks.com.au/help/imaq/examples/using-the-kinect-r-for-windows-r-from-image-acquisition-toolbox-tm.html).
-7. 
-
+6. Further documentation can be found from the [MATLAB documentation pages](http://www.mathworks.com.au/help/imaq/examples/using-the-kinect-r-for-windows-r-from-image-acquisition-toolbox-tm.html "Kinect for Windows documentation and examples").
 
 SUPPORT
 -----------
