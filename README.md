@@ -20,6 +20,13 @@ __Install MATLAB__
 The latest version of MATLAB can be isntalled from the [MathWorks website](http://www.mathworks.com.au/products/matlab/ "MathWorks products page").
 
 
+1. First ordered list item
+2. Another item
+⋅⋅* Unordered sub-list. 
+1. Actual numbers don't matter, just that it's a number
+⋅⋅1. Ordered sub-list
+4. And another item.
+
 __Install Xbox Kinect Software__
 
 This guide is based off *Kinect 360 Setup for Matlab R2014a* by __P. Mahoney__ (2014).
@@ -27,7 +34,7 @@ This guide is based off *Kinect 360 Setup for Matlab R2014a* by __P. Mahoney__ (
 1. Download and install the [Kinect For Windows SDK](http://www.microsoft.com/en-au/download/details.aspx?id=40278 "Kinect for Windows SDK").
 2. Download the [Kinect IMAQ Adaptor](http://robotics.itee.uq.edu.au/~metr4202/kinect/kinectimaq.zip "Kinect IMAQ Adaptor"), unzip it and placece the files in a MATLAB direcotry.
 3. Install the adapter in MATLAB using the command 
---*__>> imaqregister(’H:/metr4202/kinectimaq/mwkinectimaq.dll’)__.
+--* __>> imaqregister(’H:/metr4202/kinectimaq/mwkinectimaq.dll’)__.
 4. Test it was installed correctly run __imaqhwinfo__.  The output should be similar to:
 --*__ans = InstalledAdaptors: {’mwkinectimaq’} MATLABVersion: ’8.3 (R2014a)’ ToolboxName: ’Image Acquisition Toolbox’ ToolboxVersion: ’4.7 (R2014a)’__.
 5. To recieve input from the kinect run the command __>> vid = videoinput(’mwkinectimaq’, 1);__ which will create an object called __vid__ that can then be shown using the command __>> preview(vid);__.
