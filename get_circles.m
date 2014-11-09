@@ -8,18 +8,18 @@ function [centres, radii, TSTAMP] = get_circles(vid, K)
 %   matrix or 0.
 
 %% Initial Setup
-DEBUG = 1;
+DEBUG = 0;
 %if radii > about 55 we have a large cup
 %this is likely to be fairly consistent once we undistort
 min_rad = 50;
-max_rad = 90;
+max_rad = 80;
 
 %% Image Setup
 image = getsnapshot(vid);
 %timestamp
 timeTEMP = clock;
-%             HOURS           MINUTES         SECONDS
-TSTAMP = timeTEMP(4)*3600 + timeTEMP(5)*60 + timeTEMP(6);
+%          MINUTES         SECONDS
+TSTAMP = timeTEMP(5)*60 + timeTEMP(6);
 %For obvious reasons the Timestamps will break if run time > 24 hours
 
 %% Condition Image

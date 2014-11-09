@@ -22,7 +22,7 @@ for i = 1:(size(POS,1)-1),
    ANG2 = atan((POS(i+1,2)-path_C(2))/(POS(i+1,1) - path_C(1)));
    
    dist = abs(ANG2 - ANG1);
-   RES(i) = (dist/(TSTAMPS(i+1) - TSTAMPS(i)));
+   RES(i) = abs(dist/(TSTAMPS(i+1) - TSTAMPS(i)));
    
 end
 omega = mean(RES);

@@ -26,7 +26,7 @@ box = [1, 1;...                           % top-left
         1, size(refImage, 1);...                 % bottom-left
         1, 1];                   % top-left again to close the polygon
 
-newBox = transformPointsForward(tform, box)
+newBox = transformPointsForward(tform, box);
 
 %Pixloc is [xtopl, ytopl, wid, height]
 PIXLOC = [newBox(1,1), newBox(1,2),...
@@ -38,7 +38,7 @@ if DEBUG,
     figure;
     imshow(image);
     hold on;
-   % line(newBox(:, 1), newBox(:, 2), 'Color', 'y');
+    %line(newBox(:, 1), newBox(:, 2), 'Color', 'y');
     rectangle('Position',[PIXLOC(1),PIXLOC(2),PIXLOC(3),PIXLOC(4)], ...
         'EdgeColor','r','LineWidth',2 );
     title('Detected Tea');

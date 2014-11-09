@@ -3,7 +3,7 @@ function [ angles, ERR ] = inv_kin( xp, yp, zp )
 %   coords need to be in cm
 
 %Robot Description
-H1 = 19.1; %cm
+H1 = 19.6; %cm
 L0 = 6.8;
 L1 = 15.7;
 L2 = 9;
@@ -23,7 +23,10 @@ th3 = th3_RAD*180/pi;
 %LSD required to understand
 th2 = acos((dp*(L1 + L2*cos(th3_RAD)) + zsp*L2*sin(th3_RAD))/(dp^2 + zsp^2))*180/pi;
 
-angles = [th1, th2-60, th3+50];
+%Offsets due to frame differences in the equations (except angles3, thats
+%hacked)
+angles = [th1, 150-th2, 150 - th3];
+ERR = ~(isreal(angles(1)) && isreal(angles(2)) && isreal(angles(3)));
 
 end
 
