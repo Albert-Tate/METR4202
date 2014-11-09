@@ -17,7 +17,7 @@ INSTALLATION
 -----------
 __Install MATLAB__
 
-The latest version of MATLAB can be isntalled from the [MathWorks website](http://www.mathworks.com.au/products/matlab/ "MathWorks products page").
+The latest version of MATLAB can be installed from the [MathWorks website](http://www.mathworks.com.au/products/matlab/ "MathWorks products page").
 
 __Install Xbox Kinect Software__
 
@@ -35,6 +35,7 @@ __Install Dynamics__
 
 BRANDON WRITE THIS SECTION FOR ME - ty, Tom
 
+
 SUPPORT
 -----------
 Although support is not guaranteed, users can contact any of the developers if they wish.
@@ -50,3 +51,6 @@ __James Purnell__  james.purnell@uqconnect.edu.au.
 __Albert Tate__ albert.tate@uqconnect.edu.au.
 
 
+COPYRIGHT
+-----------
+Copyright 2014 to Group 42, METR4202, The University of Queensland.  Permission is hereby granted for the use and modification of any code from this project so long as proper reference is made to this group as the original owners.  
