@@ -33,7 +33,7 @@ This guide is based off *Kinect 360 Setup for Matlab R2014a* by __P. Mahoney__ (
 
 __Install Dynamixals__
 
-1. Download the SDK file from [support page](http://support.robotis.com/en/software/dynamixel_sdk/sourcestructure.htm "SDK for Dynamixals download page").
+1. Download the SDK file from the [support page](http://support.robotis.com/en/software/dynamixel_sdk/sourcestructure.htm "SDK for Dynamixals download page").
 2. Add the SDK file to path.
 2. Connect Dynamixals servo motors using the serial cables.
 2. Set the USB2Dynamixal device to TLL mode.
