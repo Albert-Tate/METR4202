@@ -32,12 +32,11 @@ This guide is based off *Kinect 360 Setup for Matlab R2014a* by __P. Mahoney__ (
 
 
 __Install Dynamics__
-
-BRANDON WRITE THIS SECTION FOR ME - ty, Tom
 1. Connect Dynamixals servo motors using the serial cables.
-2. Set the USB device to TLL mode. 
-3. If you do not have a matlab c complier, install one
-4. Run the initaise() fuction to initaise the dynamixal motors in the matlab environment
+2. Set the USB device to TLL mode.
+3. If you do not have a matlab c complier, install one (eg. visual studio 2013).
+4. Add the SDK file to path.
+4. Run the initaise() fuction to initaise the dynamixal motors in the matlab environment.
 
 SUPPORT
 -----------
