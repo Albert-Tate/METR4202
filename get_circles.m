@@ -15,7 +15,7 @@ min_rad = 50;
 max_rad = 80;
 
 %% Image Setup
-image = getsnapshot(vid);
+image = getsnapshot(vid); %can get timestamp from video device?
 %timestamp
 timeTEMP = clock;
 %          MINUTES         SECONDS

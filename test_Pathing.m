@@ -2,21 +2,24 @@
 i = 2;
 XY = [0 0];
 T = 0;
+delay1 = 0;
+delay2 = 0;
 while(1),
-    
+   tic;
    [centers, radii, TSTAMP] = get_circles(cv, 0)
    XY = [XY; centers]; %XY(2:i,:);
    T = [T, TSTAMP]; 
-   
+   delay1 = toc;
    
    if( mod(i, 6) == 0),
+       tic
       [path_C, path_R, omega] = fit_circle(XY(2:size(XY,1),:), T(2:size(T,2)));
       
       TIME = time_to_grab([320, 90], centers, path_C, path_R, omega)
       omega
-      
+      delay2 = toc;
       im = getsnapshot(cv);
-      pause(TIME) %delays
+      pause(TIME - delay1 - delay2) %delays
       GRAB = 1
       imshow(im);
         d = path_R*2;
