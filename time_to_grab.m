@@ -41,7 +41,7 @@ Acup = abs(acos((dot(ref,cup)/(norm(ref)*norm(cup)))));
 if(cup(1) > ref(1)),
     Acup = 2*pi - Acup;
 end
-time = abs((Acup - Aarm)/(omega/2))
+time = abs((Acup - Aarm)/(omega))
 %time2 = (2*pi - diff)/omega
 
 %should never happen but will ensure negative wait times are impossible

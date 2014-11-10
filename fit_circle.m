@@ -18,13 +18,14 @@ RES = zeros(size(POS,1)-1,1);
 for i = 1:(size(POS,1)-1),
    %At each point find angular distance to next point
    %Divide through by time difference to get rad/s
-   ANG1 = atan((POS(i,2)-path_C(2))/(POS(i,1) - path_C(1))); %yp-yc/xp-xc
-   ANG2 = atan((POS(i+1,2)-path_C(2))/(POS(i+1,1) - path_C(1)));
-   
-   dist = abs(ANG2 - ANG1);
+   current = path_C - POS(i,:);
+   next = path_C - POS(i + 1,:);
+   %dist = abs(ANG2 - ANG1);
+   dist = acos(dot(current,next)/(norm(current)*norm(next)));
    RES(i) = abs(dist/(TSTAMPS(i+1) - TSTAMPS(i)));
    
 end
+RES
 omega = mean(RES);
 
 if(DEBUG == 1),

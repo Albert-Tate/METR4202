@@ -14,10 +14,11 @@ DEBUG = 0;
 min_rad = 50;
 max_rad = 80;
 
+
 %% Image Setup
+timeTEMP = clock;
 image = getsnapshot(vid); %can get timestamp from video device?
 %timestamp
-timeTEMP = clock;
 %          MINUTES         SECONDS
 TSTAMP = timeTEMP(5)*60 + timeTEMP(6);
 %For obvious reasons the Timestamps will break if run time > 24 hours
