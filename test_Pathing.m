@@ -14,7 +14,7 @@ while(1),
    if( mod(i, 6) == 0),
        tic
       [path_C, path_R, omega] = fit_circle(XY(2:size(XY,1),:), T(2:size(T,2)));
-      
+      omega = 0.50265;
       TIME = time_to_grab([320, 90], centers, path_C, path_R, omega)
       omega
       delay2 = toc;

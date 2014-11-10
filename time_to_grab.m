@@ -35,14 +35,13 @@ ref = [0 -1];
 
 %find clockwise angle
     %Magical trig
-%  diff = atan2( (Pc(1)*cupPOSc(2) ) - (Pc(2)*cupPOSc(1)),...
-%          (Pc(1)*cupPOSc(1) + Pc(2)*cupPOSc(2)));
-diff = abs(acos((dot(ref,arm)/(norm(ref)*norm(arm))))...
-        - acos((dot(ref,cup)/(norm(ref)*norm(cup)))));
+    %This is always negative, 0 - acos(bleh)
+Aarm = abs(acos((dot(ref,arm)/(norm(ref)*norm(arm)))));
+Acup = abs(acos((dot(ref,cup)/(norm(ref)*norm(cup)))));
 if(cup(1) > ref(1)),
-    diff = 2*pi - diff;
+    Acup = 2*pi - Acup;
 end
-time = (diff)/omega
+time = abs((Acup - Aarm)/(omega/2))
 %time2 = (2*pi - diff)/omega
 
 %should never happen but will ensure negative wait times are impossible
