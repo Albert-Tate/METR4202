@@ -46,7 +46,7 @@ __Brandon Lydzbinski__ brandon.lydzbinski@uqconnect.edu.au.
 
 __Thomas O'Loughlin__ thomas.oloughlin@uqconnect.edu.au.
 
-__James Purnell__  james.purnell@uqconnect.edu.au.
+__James Purnell__  james.purnell1@uqconnect.edu.au.
 
 __Albert Tate__ albert.tate@uqconnect.edu.au.
 
