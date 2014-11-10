@@ -10,7 +10,7 @@ GENERAL PROJECT NOTES
 -----------
 - The __Ford Prefect__ is the name given to the robot this code was written for.  It is a revolute-revolute-revolute *pick and    place* style arm.  It uses three dynamics servo motors to acctuate its limbs.
 - To allow easy translation of code from this project to other robotic systems efforts to achieve modularity have been made.
-- The code relies on visual input from an Xbox Kinect, and was created in MATLAB R2014a for windsows 7.  This code has not been tested on earlier versions of MATLAB and no guarantee is made that it will work on earlier ones.
+- The code relies on visual input from an Xbox Kinect, and was created in MATLAB R2014a for Windows 7.  This code has not been tested on earlier versions of MATLAB and no guarantee is made that it will work on earlier ones.
 - This code is providede *as is* and the developers are not liable for any problems caused by, or with, the code.
 
 INSTALLATION
@@ -31,12 +31,13 @@ This guide is based off *Kinect 360 Setup for Matlab R2014a* by __P. Mahoney__ (
 6. Further documentation can be found from the [MATLAB documentation pages](http://www.mathworks.com.au/help/imaq/examples/using-the-kinect-r-for-windows-r-from-image-acquisition-toolbox-tm.html "Kinect for Windows documentation and examples").
 
 
-__Install Dynamics__
-1. Connect Dynamixals servo motors using the serial cables.
-2. Set the USB device to TLL mode.
-3. If you do not have a matlab c complier, install one (eg. visual studio 2013).
-4. Add the SDK file to path.
-4. Run the initaise() fuction to initaise the dynamixal motors in the matlab environment.
+__Install Dynamixals__
+
+1. Download the SDK file from [support page](http://support.robotis.com/en/software/dynamixel_sdk/sourcestructure.htm "SDK for Dynamixals download page").
+2. Add the SDK file to path.
+2. Connect Dynamixals servo motors using the serial cables.
+2. Set the USB2Dynamixal device to TLL mode.
+5. Run the initaise() fuction to initaise the dynamixal motors in the matlab environment.
 
 SUPPORT
 -----------
