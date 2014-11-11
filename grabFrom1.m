@@ -14,6 +14,7 @@ setMotorAngles(a, 84, 57);
 % % % % p = 'press enter to grab';
 % % % % res = input(p);
 
+ok = 1;
 
 end
 
