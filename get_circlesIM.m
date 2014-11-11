@@ -27,8 +27,8 @@ TSTAMP = timeTEMP(5)*60 + timeTEMP(6);
 if(any(K)), %If given a K matrix
     image = undistortImage(image, K);
 end
-%I_gray = rgb2gray(image);        % Convert to grayscale.
-I_gray = image;
+I_gray = rgb2gray(image);        % Convert to grayscale.
+%I_gray = image;
 I_edge = edge(I_gray, 'canny');    % Edge detection.
 
 %% Detect Circles
