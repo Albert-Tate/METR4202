@@ -1,5 +1,5 @@
 function [ ] = fillMe( x, y, z )
-%UNTITLED4 Summary of this function goes here
+%fillMe(x,y,z)
 %   Detailed explanation goes here
 setSpeed(0.1, 0.1, 0.1);
 mA = inv_kin(x,y-3,12)
