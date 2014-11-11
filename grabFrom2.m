@@ -1,6 +1,6 @@
 function [ok] = grabFrom2(a)
-%UNTITLED2 Summary of this function goes here
-%   Detailed explanation goes here
+% grabFrom2(a)
+%   inputs
 
 
 %% Grabs Cup
