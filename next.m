@@ -1,8 +1,12 @@
 function [  ] = next( x,y,z )
-%UNTITLED5 Summary of this function goes here
-%   Detailed explanation goes here
+%next(x,y,z)
+%   input = x, y and z location of the coaster to serve the cup to the customer and repositions itself ready to pick up
+%   the next cup off the turn table
+%   this function is called after the cup is filled with the condiments
+%   ie. after the fillMe(x,y,z) is called
+
 setSpeed(0.1, 0.1, 0.1);
-mA = inv_kin(x,y-3,12)
+mA = inv_kin(x,y,z)
 if(mA(3) >= b2c(mA(2))),
     mA(3) = b2c(mA(2));
     mA
@@ -55,6 +59,7 @@ while (1),
        break 
     end
 end
+%% Takes the arm back to the ready postion, ready to pick up the next cup
 grabFrom1(150);
 
 end
