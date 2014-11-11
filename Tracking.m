@@ -6,7 +6,10 @@
 %5 cups wide
 centers1 = 0;
 CUPS = zeros(6,20); 
-CUPCOUNT = 2;
+CUPCOUNT = 3;
+%Arm Gets Ready
+putDownCup(150);
+grabFrom1(150);
 while(size(centers1,1) < CUPCOUNT),
     [centers1, radii1, TSTAMP1] = get_circles(cv, 0)
 end
@@ -89,26 +92,49 @@ while(1),
             wait = 1
         end
         
-        tic
-        image = getsnapshot(cv);
-        [centers, rad, stamp] = get_circlesIM(image, 0);
+        %Match new cups to old data
+        centers = 0;
+        while(size(centers,1) < CUPCOUNT),
+            tic
+            image = getsnapshot(cv);
+            [centers, rad, ~] = get_circlesIM(image, 0);
+        end
         dist = zeros(1, size(path_C,1));
+        mapping = zeros(size(path_C,1), 1);
         for k = 1:size(centers,1),
-           for i = 1:size(path_C, 1),
-               dist(i) = abs(norm(centers(k,:) - path_C(i,:)) - path_R(i,:));
-           end
-           index = find(dist == min(dist));
-           centers(k,:)
-           path_R(index)
-           OVER = 1
+           dist(k) = abs(norm(centers(k,:) - path_C(1,:)));
         end
         
-        max = find(path_R == max(path_R));
-        TIME = time_to_grab([320, 100], centers(k,:), path_C(max,:), path_R(max), OMEGA)
+        delay = 0;
+        %% Take off cup, delete its data, decrement cupcount
+        % and retake image
+        for j = 1:CUPCOUNT,
+            max_R = find(dist == max(dist));
+            max_Rprime = find(path_R == max(path_R));
+            %max_R in centers maps to max_Rprime in path_R, path_C, CUPS
+
+            TIME = time_to_grab([320, 100], centers(max_R,:), ...
+                path_C(max_Rprime,:), path_R(max_Rprime), OMEGA)
+
+            delay = delay + toc;
+            tic;
+            if(delay > TIME),
+                pause(2*pi/OMEGA  - (delay - TIME))
+            else
+                pause(TIME - delay);
+            end
+            GRAB = 1
+            grabFrom2(150);
+            takeToFill(180,76,20)
+            putCupBack()
+
+            %0 CUPS, 0 centers and zero path_C and path_R
+            CUPS(max_Rprime,:) = 0;
+            centers(max_R,:) = 0;
+            path_C(max_Rprime,:) = 0;
+            path_R(max_Rprime) = 0;
+        end
         
-        delay = toc;
-        pause(TIME - delay);
-        GRAB = 1
         break
     end
 
