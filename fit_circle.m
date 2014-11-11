@@ -25,7 +25,7 @@ for i = 1:(size(POS,1)-1),
    RES(i) = abs(dist/(TSTAMPS(i+1) - TSTAMPS(i)));
    
 end
-RES
+
 omega = mean(RES);
 
 if(DEBUG == 1),
