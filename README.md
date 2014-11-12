@@ -4,7 +4,7 @@ METR4202 Lab 3 Repository
  
  __Last edited:__  12/11/2014.
 
-__Version:__  2.3.
+__Version:__  2.5.
  
 GENERAL PROJECT NOTES
 -----------
@@ -93,3 +93,7 @@ __2.1__    Added ability to take large or small cups off (in order of closest to
 __2.2__    Implemented ability to take cup to a filling coaster, request to be filled and then be dropped off at an end coaster.
 
 __2.3__    Increased modularity of cup image manipulation functions, small bug fixes.
+
+__2.4__    Fixed numerous bugs, now picking up and moving three cups to the filling station robustly.
+
+__2.5__    Integrated text-to-speech functions with the main functions.
