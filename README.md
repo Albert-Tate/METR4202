@@ -10,7 +10,7 @@ GENERAL PROJECT NOTES
 -----------
 - The __Ford Prefect__ is the name given to the robot this code was written for.  It is a revolute-revolute-revolute *pick and    place* style arm.  It uses three dynamics servo motors to acctuate its limbs.
 - To allow easy translation of code from this project to other robotic systems efforts to achieve modularity have been made.
-- The code relies on visual input from an Xbox Kinect, and was created in MATLAB R2014a for Windows 7.  This code has not been tested on earlier versions of MATLAB and no guarantee is made that it will work on earlier ones.
+- The code relies on visual input from an Xbox 360 Kinect, and was created in MATLAB R2014a for Windows 7.  This code has not been tested on earlier versions of MATLAB and no guarantee is made that it will work on earlier ones.
 - This code is providede *as is* and the developers are not liable for any problems caused by, or with, the code.
 
 INSTALLATION
