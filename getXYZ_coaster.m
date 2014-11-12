@@ -6,10 +6,10 @@ elapsed = 0;
 TIME_MAX = 15;
 scene = getsnapshot(cv);
 %% Find coaster
-coasterBox = [0 0 0 0];
-while(coasterBox(1) == 0),
+coaster = [0 0 0 0];
+while(coaster(1) == 0),
     try
-        coasterBox = get_surf_match(scene, coasterIMG);
+        coaster = get_surf_match(scene, coasterIMG);
     catch err
     end
     scene = getsnapshot(cv);
@@ -22,10 +22,10 @@ while(coasterBox(1) == 0),
 end
 
 %% Find Marker
-fidBox = [0 0 0 0];
-while(fidBox(1) == 0),
+fid = [0 0 0 0];
+while(fid(1) == 0),
     try
-        fidBox = get_surf_match(scene, fiducialIMG);
+        fid = get_surf_match(scene, fiducialIMG);
     catch err
     end
     scene = getsnapshot(cv);
@@ -38,10 +38,16 @@ while(fidBox(1) == 0),
 end
 
 %% Find 3D location
-marker3D = pixel2meat(K, coasterBox(1) + 0.5*coasterBox(3),...
-                       coasterBox(3) + 0.5*coasterBox(4), 57.5);
-FID3D = pixel2meat(K, fidBox(1) + 0.5*fidBox(3),...
-                             fidBox(3) + 0.5*fidBox(4), 57.5);
+FOVy = 43*pi/180;
+
+y = coaster(2);
+Z = 57.5/(cos(abs((240-y)/240)*FOVy/2));
+marker3D = pixel2meat(K, coaster(1),...
+                       coaster(2), Z);
+y = fid(2);
+Z = 57.5/(cos(abs((240-y)/240)*FOVy/2));            
+FID3D = pixel2meat(K, fid(1),...
+                       fid(2), Z);
 %Reassign Axes
 COORDS = [0; 0; 0];
 FID3D(1) = -FID3D(1);

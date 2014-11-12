@@ -28,6 +28,7 @@ matchedImagePoints = impoints(pairs(:, 2), :);
     estimateGeometricTransform(matchedRefPoints, ...
     matchedImagePoints, 'affine');
 
+
 box = [1, 1;...                           % top-left
         size(refImage, 2), 1;...                 % top-right
         size(refImage, 2), size(refImage, 1);... % bottom-right
@@ -36,11 +37,8 @@ box = [1, 1;...                           % top-left
 
 newBox = transformPointsForward(tform, box);
 
-%Pixloc is [xtopl, ytopl, wid, height]
-PIXLOC = [newBox(1,1), newBox(1,2),...
-        (newBox(2,1) - newBox(1,1)),...
-        (newBox(3,2) - newBox(1,2))];
-    
+newIN = transformPointsForward(tform,inlierRefPoints.Location);
+PIXLOC = mean(newIN);
 
 if DEBUG,
     figure;
