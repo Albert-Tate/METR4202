@@ -1,5 +1,5 @@
 function [ index, index_prime ] = get_map_canidate( CUPS, path_R,...
-                            path_C, centers, size)
+                            path_C, centers, order_size)
 %UNTITLED2 Summary of this function goes here
 %   Detailed explanation goes here
 %index maps to centers, index_prime maps corresponding cup to CUPS, path_R
@@ -7,17 +7,16 @@ function [ index, index_prime ] = get_map_canidate( CUPS, path_R,...
 
 %% Get Radius List
 centers
-size(centers,1)
-dist = zeros(1, size(centers,1))
+dist = zeros(1, size(centers,1));
 for k = 1:size(centers,1),
     dist(k) = abs(norm(centers(k,:) - path_C(1,:)));
 end
-
+dist
 %% Find the cup closest to the edge and check if it is the right type
 %  If not, simply look at the next closest
 while(1),
    %sanity check
-   if max(dist) == 0,
+   if max(path_R) == 0,
        index = -1; index_prime = -1;
        return
    end
@@ -30,10 +29,10 @@ while(1),
    if(CUPS(index_prime, 3) < 60),
        type_dex = 1;
    else
-       type_dex = 0;
+       type_dex = 2;
    end
    
-   if(type_dex == size),
+   if(type_dex == order_size),
       return 
    end
    %if we get here that wasn't the right cup!
@@ -42,22 +41,10 @@ while(1),
    % function!
    centers(index,:) = 0;
    path_R(index_prime,:) = 0;
+   dist(index) = 0;
    
 end
 
 
 end
-
-%         %Match new cups to old data
-%         centers = 0;
-%         while(size(centers,1) < CUPCOUNT),
-%             tic
-%             image = getsnapshot(cv);
-%             [centers, ~, ~] = get_circlesIM(image, 0);
-%         end
-%         dist = zeros(1, size(path_C,1));
-%         mapping = zeros(size(path_C,1), 1);
-%         for k = 1:size(centers,1),
-%            dist(k) = abs(norm(centers(k,:) - path_C(1,:)));
-%         end
 

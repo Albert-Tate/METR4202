@@ -10,7 +10,7 @@ function [ PIXLOC ] = get_surf_match( image, refImage )
 %   robust detector to occlusion, out of frame rotation
 %   and nonlinear warping.
 
-DEBUG = 1;
+DEBUG = 0;
 
 image = rgb2gray(image); refImage = rgb2gray(refImage);
 
