@@ -4,7 +4,7 @@ INSTALLATION
 INSTALL MATLAB
 -----------
 
-The latest version of MATLAB can be installed from the [MathWorks website](http://www.mathworks.com.au/products/matlab/ "MathWorks products page").  The version used in this project was R2014a.  Ensure that all of the project files have been added to MATLAB's path. Details on how this is done can be found [here](http://www.mathworks.com.au/help/matlab/ref/addpath.html "Add files to MATLAB path")
+The latest version of MATLAB can be installed from the [MathWorks website](http://www.mathworks.com.au/products/matlab/ "MathWorks products page").  The version used in this project was R2014a.  Ensure that all of the project files have been added to MATLAB's path. Details on how this is done can be found [here](http://www.mathworks.com.au/help/matlab/ref/addpath.html "Add files to MATLAB path"). NOTE: the text to speech function tts.m was written by Siyi Deng and can be found (here)[http://www.mathworks.com.au/matlabcentral/fileexchange/18091-text-to-speech "tts function"].  To install it simply add it to the MATLAB path.
 
 INSTALL XBOX KINECT SOFTWARE
 -----------
