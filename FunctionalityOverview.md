@@ -5,6 +5,7 @@ Functionality Overview
 OVERALL
 -----------
 This section contains the main functions used in the project.
+
 __TakeAllCups.m__ The main script that takes all of the cups required off the turntable and fills the orders.
 
 ARM KINEMATICS
@@ -13,12 +14,19 @@ All of the files that are needed to move the arm around the workspace, as well a
 
 fillMe.m -> talk to Brandon
 
+__readMotorAngles.m__ Reads in the current angles of the three motors being used and outputs them in an array.
+
+__setMotorAngles.m__ Takes in three angles and sets motors one, two and three to them (respectively).
+
+__setSpeed.m__ Sets the speed of the three motors based on the three speeds input (respectively).
 
 COASTER DETECTION
 -----------
 The functions that are used to detect and locate the fudicial markers that represent coasters.  The coasters are used to represent fill locations and customer pickup locations.
 
 __fidREF.png__ Image used to detect fiducial marker in the scene. NOTE: this image might not work with a different camera or in a different environment.  It is recommended a new reference image be taken for such cases.
+
+__machine.png__ Image used to detect the filling location (another fiducial marker reference image).
 
 __getXYZ_coaster.m__ Uses the fiducial reference to locate the corresponding marker in *XYZ* space relative to the robot.
 
@@ -41,6 +49,8 @@ __Tracking.m__ Function used to test motion planning with a single test on the t
 __create_model.m__ Creates a set of radii and centers for multiple cups, then uses this to detect the angular velocity of the turntable.  Utilises a weighted sum to do this, with higher weighting being given to cups further from the center as they will have less error.
 
 __fit_circle.m__ Takes a set of positions and timestamps for a single cup in motion and will fit a circle to them and provide an angular velocity.
+
+__get_map_canidate.m__ Provides mapping between the original model and the recently detected cups.  Internally sorts by path radius to find the outermost cup of the specified type.  We choose the outermost cup to reduce the chance of knocking over other cups.
 
 REQUESTING CONDIMENTS
 -----------
