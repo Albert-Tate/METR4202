@@ -76,6 +76,10 @@ __fit_circle.m__ Takes a set of positions and timestamps for a single cup in mot
 
 __get_map_canidate.m__ Provides mapping between the original model and the recently detected cups.  Internally sorts by path radius to find the outermost cup of the specified type.  We choose the outermost cup to reduce the chance of knocking over other cups.
 
+__test_Pathing.m__ Tests creating paths for multiple cups. 
+
+__time_to_grab.m__ Given a cup's center and path radius outputs the time until the cup is in the pickup area. NOTE: caller must take into accuoun the finite time it takes to run these functions and take/process the imaegs.
+
 REQUESTING CONDIMENTS
 -----------
 Our team used audio to signal how many of each condiment to place in the waiting cup.  To do this a text to speech function was implemented.  The functions required to do this part are:
