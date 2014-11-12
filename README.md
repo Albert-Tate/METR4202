@@ -4,13 +4,13 @@ METR4202 Lab 3 Repository
  
  __Last edited:__  12/11/2014.
 
-__Version:__  2.2.
+__Version:__  2.3.
  
 GENERAL PROJECT NOTES
 -----------
 - The __Ford Prefect__ is the name given to the robot this code was written for.  It is a revolute-revolute-revolute *pick and    place* style arm.  It uses three dynamics servo motors to acctuate its limbs.
 - To allow easy translation of code from this project to other robotic systems efforts to achieve modularity have been made.
-- The code relies on visual input from an Xbox Kinect, and was created in MATLAB R2014a for Windows 7.  This code has not been tested on earlier versions of MATLAB and no guarantee is made that it will work on earlier ones.
+- The code relies on visual input from an Xbox 360 Kinect, and was created in MATLAB R2014a for Windows 7.  This code has not been tested on earlier versions of MATLAB and no guarantee is made that it will work on earlier ones.
 - This code is providede *as is* and the developers are not liable for any problems caused by, or with, the code.
 
 INSTALLATION
@@ -84,9 +84,12 @@ __1.3__    Implemented fiducial marker detection to allow cups to be taken to th
 
 __1.4__    Added functionality for putting down and dropping off cups.
 
+__1.5__    Fixed bug to do with overloading max() function.
+
 __2.0__    Changed code to allow the arm to repedatively pick up and move multiple cups off the turntable - order is distance from center of timetable.
 
 __2.1__    Added ability to take large or small cups off (in order of closest to center if more than one present).
 
 __2.2__    Implemented ability to take cup to a filling coaster, request to be filled and then be dropped off at an end coaster.
 
+__2.3__    Increased modularity of cup image manipulation functions, small bug fixes.
