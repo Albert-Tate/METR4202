@@ -14,7 +14,7 @@ ARM KINEMATICS
 -----------
 All of the files that are needed to move the arm around the workspace, as well as those used to go through predefined movements such as picking up and putting down cups.
 
-fillMe.m -> talk to Brandon
+__fillMe.m__ Takes the picked up cup to the filling coaster ready to get filled.
 
 __readMotorAngles.m__ Reads in the current angles of the three motors being used and outputs them in an array.
 
@@ -22,15 +22,15 @@ __setMotorAngles.m__ Takes in three angles and sets motors one, two and three to
 
 __setSpeed.m__ Sets the speed of the three motors based on the three speeds input (respectively).
 
-grabFrom1.m
+__grabFrom1.m__ Sets the arm to the ready postion, ready to pick up the cup from the turntable.
 
-grabFrom2.m
+__grabFrom2.m__ Commands the arm to pick up the cup from the turntable.
 
-initalise.m
+__initalise.m__ Installs dynamicixal c libary and sets required register settings.
 
-moving.m
+__moving.m__ Return 1 if the arm is moving, returns 0 if the arm is stationary.
 
-next.m
+__next.m__ Takes the cup to the serving coaster.
 
 __shutDown.m__ Shuts down the dynamixal motors.
 
