@@ -4,7 +4,7 @@ METR4202 Lab 3 Repository
  
  __Last edited:__  12/11/2014.
 
-__Version:__  2.5.
+__Version:__  2.6.
  
 GENERAL PROJECT NOTES
 -----------
@@ -12,32 +12,6 @@ GENERAL PROJECT NOTES
 - To allow easy translation of code from this project to other robotic systems efforts to achieve modularity have been made.
 - The code relies on visual input from an Xbox 360 Kinect, and was created in MATLAB R2014a for Windows 7.  This code has not been tested on earlier versions of MATLAB and no guarantee is made that it will work on earlier ones.
 - This code is providede *as is* and the developers are not liable for any problems caused by, or with, the code.
-
-INSTALLATION
------------
-__Install MATLAB__
-
-The latest version of MATLAB can be installed from the [MathWorks website](http://www.mathworks.com.au/products/matlab/ "MathWorks products page").
-
-__Install Xbox Kinect Software__
-
-This guide is based off *Kinect 360 Setup for Matlab R2014a* by __P. Mahoney__ (2014).
-
-1. Download and install the [Kinect For Windows SDK](http://www.microsoft.com/en-au/download/details.aspx?id=40278 "Kinect for Windows SDK").
-2. Download the [Kinect IMAQ Adaptor](http://robotics.itee.uq.edu.au/~metr4202/kinect/kinectimaq.zip "Kinect IMAQ Adaptor"), unzip it and placece the files in a MATLAB direcotry.
-3. Install the adapter in MATLAB using the command __>>imaqregister(’H:/metr4202/kinectimaq/mwkinectimaq.dll’)__.
-4. Test it was installed correctly run __imaqhwinfo__.  The output should be similar to: __ans=InstalledAdaptors: {’mwkinectimaq’} MATLABVersion: ’8.3 (R2014a)’ ToolboxName: ’Image Acquisition Toolbox’ ToolboxVersion: ’4.7 (R2014a)’__.
-5. To recieve input from the kinect run the command __>> vid = videoinput(’mwkinectimaq’, 1);__ which will create an object called __vid__ that can then be shown using the command __>> preview(vid);__.
-6. Further documentation can be found from the [MATLAB documentation pages](http://www.mathworks.com.au/help/imaq/examples/using-the-kinect-r-for-windows-r-from-image-acquisition-toolbox-tm.html "Kinect for Windows documentation and examples").
-
-
-__Install Dynamixals__
-
-1. Download the SDK file from the [support page](http://support.robotis.com/en/software/dynamixel_sdk/sourcestructure.htm "SDK for Dynamixals download page").
-2. Add the SDK file to path.
-2. Connect Dynamixals servo motors using the serial cables.
-2. Set the USB2Dynamixal device to TLL mode.
-5. Run the initaise() fuction to initaise the dynamixal motors in the matlab environment.
 
 SUPPORT
 -----------
@@ -97,3 +71,5 @@ __2.3__    Increased modularity of cup image manipulation functions, small bug f
 __2.4__    Fixed numerous bugs, now picking up and moving three cups to the filling station robustly.
 
 __2.5__    Integrated text-to-speech functions with the main functions.
+
+__2.6__    Added glass chiming capabilities.
