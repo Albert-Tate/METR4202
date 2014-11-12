@@ -12,6 +12,7 @@ GENERAL PROJECT NOTES
 - To allow easy translation of code from this project to other robotic systems efforts to achieve modularity have been made.
 - The code relies on visual input from an Xbox 360 Kinect, and was created in MATLAB R2014a for Windows 7.  This code has not been tested on earlier versions of MATLAB and no guarantee is made that it will work on earlier ones.
 - This code is providede *as is* and the developers are not liable for any problems caused by, or with, the code.
+- The function Inv_kin.m contains a set of parameters for defining the physical sizes of the robot arm, all in cm and inspired from DH parameters. H0 refers to the size from the ground connection to the rotation of the first link. L0 is the perpandicular offset from the center of rotation (link 1) to the first elbow (link2). L1 and L2 refer to the lengths of the first limb and the distance from the final link to the tooltip.
 
 SUPPORT
 -----------
