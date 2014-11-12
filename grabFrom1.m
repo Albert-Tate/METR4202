@@ -1,18 +1,20 @@
 function [ok] = grabFrom1(a)
-%UNTITLED2 Summary of this function goes here
-%   Detailed explanation goes here
+% grabFrom1(a)
+%   input = motor 1 angle
+%   outputs 1 if ok
+%   this function is used to get the arm in the ready postion ready to pick up the cup
 
 %% Gets in ready position
 setSpeed(0.1,0.1,0.1);
-%ReadyPosition
 setMotorAngles(a, 62, 2);
-% pause(3)
-%Stage 1
 setMotorAngles(a, 84, 57);
-% pause(3)
+
+%% Commented code is used to manulaly control the arm for testing purposes,
+% Please disreguard the follow code below in comments
 % % % % p = 'press enter to grab';
 % % % % res = input(p);
 
+ok = 1;
 
 end
 
