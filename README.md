@@ -30,7 +30,7 @@ __Albert Tate__ albert.tate@uqconnect.edu.au.
 
 COPYRIGHT
 -----------
-Copyright 2014 to Group 42, METR4202, The University of Queensland.  Permission is hereby granted for the use and modification of any code from this project so long as proper reference is made to this group as the original owners.  NOTE: the text to speech function tts.m was written by Siyi Deng and can be found (here)[http://www.mathworks.com.au/matlabcentral/fileexchange/18091-text-to-speech "tts function"].
+Copyright 2014 to Group 42, METR4202, The University of Queensland.  Permission is hereby granted for the use and modification of any code from this project so long as proper reference is made to this group as the original owners.  NOTE: the text to speech function tts.m was written by Siyi Deng and can be found [here](http://www.mathworks.com.au/matlabcentral/fileexchange/18091-text-to-speech "tts function").
 
 UPDATE LOG
 -----------
